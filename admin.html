@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>پنل مدیریت</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+<div class="box">
+<h1>پنل مدیریت Boilerpart</h1>
+
+<h3>محصولات</h3>
+
+<div id="products"></div>
+
+</div>
+
+<script>
+
+const API="https://boilerpart-backend-production.up.railway.app";
+
+async function load(){
+
+const r=await fetch(API+"/api/products");
+
+const data=await r.json();
+
+document.getElementById("products").innerHTML =
+data.map(p=>
+`
+<div>
+<h3>${p.name}</h3>
+<p>${p.brand}</p>
+<p>${p.price}</p>
+</div>
+`
+).join("");
+
+}
+
+load();
+
+</script>
+
+</body>
+</html>
