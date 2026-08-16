@@ -1,4 +1,4 @@
-const API='https://api.boilerpart.ir/api/products';
+const API='https://boilerpart-backend-production.up.railway.app/api/products';
 
 async function load(){
 try{
