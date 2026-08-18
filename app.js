@@ -23,7 +23,7 @@ async function login(){
       document.getElementById("msg").innerText="ورود موفق";
 
       setTimeout(()=>{
-        window.location.href="admin-panel.html";
+        window.location.href="admin.html";
       },1000);
 
     }else{
